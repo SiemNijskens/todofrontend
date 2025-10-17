@@ -36,10 +36,10 @@ const HomePage = () => {
             {tasks && tasks.length > 0 ? (
                 <ul>
                     {tasks.map((task: TaskSummaryDTO) => (
-                        <li key={task.id} onClick={() => {
-                        }}
-                        >
-                            {task.task}
+                        <li key={task.id} onClick={() => {}}>
+                            <div>{task.task}</div>
+                            <div>{task.color}</div>
+                            <div>{task.status}</div>
                             <input type='button' value='details' onClick={() => {
                                 setTask(task)
                                 setShowDetails(true)
@@ -48,7 +48,7 @@ const HomePage = () => {
                     ))}
                 </ul>
             ) : (
-                <p>No users found</p>
+                <p>No tasks found</p>
             )}
         </div>
     );
