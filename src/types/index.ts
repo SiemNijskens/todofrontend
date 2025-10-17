@@ -5,10 +5,27 @@ export interface TaskSummaryDTO {
     color: Color;
 }
 
-export interface Color{
-    color:string;
+// export interface Color{
+//     color:number;
+// }
+
+// export interface Status{
+//     status:string;
+// }
+
+export enum Status {
+    PENDING,
+    PLANNED,
+    INPROGRESS,
+    DONE
 }
 
-export interface Status{
-    status:string;
+export enum Color {
+    RED,
+    ORANGE,
+    YELLOW,
+    GREEN,
+    BLUE,
+    PURPLE,
+    NONE
 }
